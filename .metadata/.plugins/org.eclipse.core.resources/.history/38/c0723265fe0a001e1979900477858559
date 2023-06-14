@@ -1,0 +1,5 @@
+package com.examplerest.service.impl;
+
+public interface UserService {
+
+}

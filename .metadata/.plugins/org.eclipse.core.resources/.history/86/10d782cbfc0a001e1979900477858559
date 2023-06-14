@@ -1,0 +1,5 @@
+package com.examplerest.service.model;
+
+public class User {
+
+}

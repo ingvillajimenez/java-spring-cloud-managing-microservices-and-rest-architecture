@@ -1,0 +1,85 @@
+package com.examplerest.service.impl;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.file.attribute.UserDefinedFileAttributeView;
+import java.util.Iterator;
+import java.util.List;
+
+import com.examplerest.service.model.User;
+
+public class UserServiceImpl implements UserService, UserDefinedFileAttributeView {
+	
+	private static List<User> users;
+
+	@Override
+	public void delete(String arg0) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<String> list() throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int read(String arg0, ByteBuffer arg1) throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int size(String arg0) throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int write(String arg0, ByteBuffer arg1) throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public User findById(long id) {
+		return null;
+	}
+	
+	@Override
+	public void updateUser(User user) {
+
+	}
+	
+	@Override
+	public List<User> findAllUsers() {
+		return null;
+	}
+	
+	@Override
+	public void deleteAllUsers() {
+		users.clear();
+	}
+	
+	@Override
+	public boolean isUserExist(User user) {
+		return false;
+	}
+	
+	@Override
+	public void deleteUserById(long id) {
+		for (Iterator<User> iterator = users.iterator(); iterator.hasNext(); ) {
+			User user = iterator.next();
+			if (user.getId() == id) {
+				iterator.remove();
+			}
+		}
+	}
+}

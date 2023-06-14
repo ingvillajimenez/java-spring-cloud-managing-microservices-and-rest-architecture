@@ -1,0 +1,10 @@
+package com.example.model;
+
+public class User {
+	
+	private long id;
+	private String name;
+	prviate int age;
+	private double salary;
+
+}
